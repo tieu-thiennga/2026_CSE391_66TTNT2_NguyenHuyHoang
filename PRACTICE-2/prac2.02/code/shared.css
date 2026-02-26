@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: purple;
+
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
+    width:auto;
+    box-sizing: border-box;
+}
+#page-logo a{
+    font-family: "Oleo Script", cursive;
+    font-size: 30px;
+    color:rgb(215, 208, 72);
+    text-decoration: none;
+}
+header ul{
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header li{
+    margin-left: 20px;
+}
+header a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+}
+footer {
+    background-color: black;
+    padding: 24px;
+}
+footer ul {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+footer li {
+    margin: 0 20px;
+}
+footer img {
+    width: 40px;
+    height: 40px;
+}
