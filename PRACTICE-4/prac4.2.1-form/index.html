@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="s1.css">
+
+</head>
+<body>
+    <div class="container">
+    <form id="registerForm">
+        <h1>ĐĂNG KÝ TÀI KHOẢN</h1>
+
+        <div class="form-group">
+            <label>Họ và tên *</label>
+            <input type="text" id="fullname" placeholder="Nhập họ tên">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Email *</label>
+            <input type="text" id="email" placeholder="email@domain.com">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại *</label>
+            <input type="text" id="phone" placeholder="0xxxxxxxxx">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Mật khẩu *</label>
+            <input type="password" id="password" placeholder="Tối thiểu 8 ký tự">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Xác nhận mật khẩu *</label>
+            <input type="password" id="confirmPassword">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <input type="radio" name="gender" value="Nam"> Nam
+            <input type="radio" name="gender" value="Nữ"> Nữ
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="terms"> Tôi đồng ý với điều khoản
+            <small class="error-msg"></small>
+        </div>
+
+        <button type="submit">Đăng Ký</button>
+    </form>
+    <div id="successMsg" style="display:none; text-align:center;">
+        <h1 style="color: rgb(8, 149, 8);">Đăng ký thành công! </h1>
+        <p>Chào mừng, <span id="regName"></span></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

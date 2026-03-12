@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Điểm Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>QUẢN LÝ ĐIỂM SINH VIÊN</h1>
+    
+    <div class="input-group">
+        <input type="text" id="txtName" placeholder="Họ tên sinh viên">
+        <input type="number" id="txtScore" placeholder="Điểm (0-10)" min="0" max="10">
+        <button id="btnAdd">Thêm</button>
+    </div>
+    <hr>
+
+    <div class="filter-group">
+        <input type="text" id="txtSearch" placeholder="Tìm tên sinh viên...">
+        <select id="selGrade">
+            <option value="All">Tất cả xếp loại</option>
+            <option value="Giỏi">Giỏi</option>
+            <option value="Khá">Khá</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Yếu">Yếu</option>
+        </select>
+    </div>
+
+    <table border="1" width="100%" id="studentTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th id="sortScore" style="cursor:pointer">Điểm <span id="sortIcon">↕</span></th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
+
+    <div id="statistics" style="margin-top: 10px; font-weight: bold;">
+        Tổng số: 0 | Điểm TB: 0
+    </div>
+</div>
+<script src="java.js"></script>
+
+</body>
+</html>
