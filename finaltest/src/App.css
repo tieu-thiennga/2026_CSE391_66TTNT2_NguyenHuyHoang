@@ -1,0 +1,327 @@
+/* =========================================
+  BỘ CSS TỔNG HỢP - QUẢN LÝ NHÂN SỰ
+  Phong cách: Clean & Professional
+  ========================================= 
+*/
+
+/* 1. THIẾT LẬP CƠ BẢN (RESET) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5; /* Nền trang xám nhạt hiện đại */
+  color: #333;
+}
+
+/* 2. THANH ĐIỀU HƯỚNG (NAVBAR) */
+.navbar {
+  background-color: #212529; /* Màu đen Raven */
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: #adb5bd;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Khối tìm kiếm trong Navbar */
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-input {
+  padding: 7px 15px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #444;
+  outline: none;
+  width: 220px;
+}
+
+.search-btn {
+  padding: 7px 15px;
+  background-color: #343a40;
+  color: white;
+  border: 1px solid #444;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* 3. PHẦN TIÊU ĐỀ TRANG & NÚT THÊM MỚI */
+.main-content {
+  padding: 30px 60px;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-list h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1d21;
+}
+
+.btn-add {
+  background-color: #3b82f6; /* Xanh dương chủ đạo */
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #2563eb;
+}
+
+/* 4. BẢNG DANH SÁCH NHÂN VIÊN (TABLE) */
+.list-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  background-color: #ffffff;
+  padding: 18px 15px;
+  text-align: left;
+  border-bottom: 2px solid #edf2f7;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.employee-table td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #444;
+}
+
+/* Nút Sửa/Xóa trong bảng */
+.btn-edit {
+  background-color: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 5. PHẦN FORM POP-UP (MODAL) - NỀN TRẮNG, VIỀN XANH */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Làm mờ nền tinh tế */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Hộp Modal chứa Form */
+.modal-content {
+  padding: 0 !important;
+  width: 750px !important;
+  background-color: white !important;
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: none !important;
+}
+
+/* Tiêu đề Form: Nền trắng, Chữ xanh, Viền xanh dưới */
+.custom-form-header {
+  background-color: #2e12e2 !important;
+  color: #f8f7f9 !important;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ecdd0b !important;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.close-x-btn {
+  background: none;
+  border: none;
+  color: #37800a !important;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Thân Form chia 2 cột */
+.custom-form-body {
+  padding: 30px;
+  background-color: white !important;
+}
+
+.custom-form-row {
+  display: flex;
+  gap: 30px; /* Khoảng cách giữa 2 cột */
+  margin-bottom: 20px;
+}
+
+.custom-form-group {
+  flex: 1; /* Mỗi cột chiếm 50% */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.custom-form-group label {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* INPUT & SELECT: Nền trắng, Chữ đen, Viền xanh */
+.custom-form-group input, 
+.custom-form-group select {
+  background-color: white !important;
+  color: #5c86ce !important;
+  border: 1px solid #cbd5e0 !important; /* Viền xám nhẹ ban đầu */
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Khi bấm vào ô nhập liệu thì hiện viền xanh đậm */
+.custom-form-group input:focus,
+.custom-form-group select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.custom-gender-flex {
+  display: flex;
+  gap: 25px;
+  margin-top: 5px;
+}
+
+.custom-gender-flex label {
+  font-weight: 400;
+  display: flex;
+  align-items: left;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Phần nút bấm cuối Form */
+.custom-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+  border-top: 1px solid #edf2f7;
+  padding-top: 25px;
+}
+
+.btn-save-green {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-cancel-gray {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save-green:hover, .btn-cancel-gray:hover {
+  opacity: 0.9;
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 16px;
+  margin-top: 4px;
+  display: block;
+}
+
+.croptext{
+    text-align: left;
+    margin-bottom: 25px;
+}
+.app-footer {
+  background-color: #f4f4f9; /* Màu tương tự header */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
